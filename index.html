@@ -1,0 +1,44 @@
+<!--All code developed by Thomas Grimes-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Thomas Grimes</title>
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="topHeader" style="margin-left:50px;">Thomas Grimes</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><a href="https://github.com/tgrimeswss" target="_blank"><img class="topHeaderImg largerHeaderImg" src="img/github.png"></a></div>
+        <div class="col-md-4"><img class="topHeaderImg largerHeaderImg" src="img/phone.png"></div>
+        <div class="col-md-4"><img class="topHeaderImg largerHeaderImg" src="img/email.png"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="menuElements" style="margin-top:35px;" data-bind="foreach:titleArray">
+            <li class="formatHeader largerFont" data-bind="text:title,click:$parent.displayInfo"></li>
+            <div class="showInfo" style="display:none;" data-bind="css: id">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="http://knockoutjs.com/downloads/knockout-3.4.2.js"></script>
+    <script src="knockout-mapping.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="model.js"></script>
+    <script src="app.js"></script>
+    <script src="contentConstructors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  </body>
+</html>
