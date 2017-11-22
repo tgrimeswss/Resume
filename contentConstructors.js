@@ -36,8 +36,11 @@ function appendElements(element) {
   }
 
   function projects (element) {
-    //arrow (projects,i);
-    console.log(element);
+    var projects = $('.projects');
+    for (var i = 0; i < info.length; i++) {
+      projects.append('<h3 class="subHeader">'+info[i].title+'</h3>');
+      projects.append()
+    }
   }
 
   function clientReviews (element) {
@@ -71,6 +74,15 @@ function appendElements(element) {
     return(result);
   }
 
+  function headerData(element) {
+    id = $('.'+element.id);
+    if (element.id === 'gitHub') {
+      id.append('<a href="'+element.title+'">tgrimessWSS</a>');
+    } else {
+      id.append('<p>'+element.title+'</p>')
+    }
+  }
+
   if(id === 'skills') {
     skills (element);
   } else if (id === 'experience') {
@@ -81,5 +93,7 @@ function appendElements(element) {
     projects (element);
   } else if (id === 'clientReviews') {
     clientReviews (element);
+  } else if (id === 'gitHub' || id === 'phone' || id === 'email') {
+    headerData (element);
   }
 }

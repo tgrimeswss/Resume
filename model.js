@@ -53,7 +53,9 @@ var data = [
     id : 'projects',
     info : [
       {
-
+        title : 'The Mechanism',
+        description : '',
+        dates : ''
       }
     ]
   },
@@ -103,5 +105,23 @@ var data = [
         testimonial : '"We would recommend Thomas Grimes highly!"'
       }
     ]
+  }
+];
+
+var headerData = [
+  {
+    title : 'https://github.com/tgrimeswss',
+    id : 'gitHub',
+    img : 'img/github.png'
+  },
+  {
+    title : '516-978-9413',
+    id : 'phone',
+    img : 'img/phone.png'
+  },
+  {
+    title : 'tgrimes.westshoresolutions@gmail.com',
+    id : 'email',
+    img : 'img/email.png'
   }
 ];

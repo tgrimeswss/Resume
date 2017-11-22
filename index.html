@@ -17,9 +17,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4"><a href="https://github.com/tgrimeswss" target="_blank"><img class="topHeaderImg largerHeaderImg" src="img/github.png"></a></div>
-        <div class="col-md-4"><img class="topHeaderImg largerHeaderImg" src="img/phone.png"></div>
-        <div class="col-md-4"><img class="topHeaderImg largerHeaderImg" src="img/email.png"></div>
+        <div class="col-md-12">
+          <div data-bind="foreach:headerTitleArray">
+            <li class="listElements horizontalDisplay headerWidth"><img class="topHeaderImg largerHeaderImg" data-bind="attr : {src : img},click:$parent.displayInfo">
+              <div style="display:none;" data-bind="css: id"></div>
+            </li>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12">

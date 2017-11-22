@@ -2,7 +2,7 @@ var ViewModel = {
 
   toggleVisibility : function(element) {
     if ($(element).css('display') == 'none') {
-      $(element).empty();//Empties the contents in the showInfo element
+      $(element).empty();
       $(element).css('display','block');
     }
     else {
@@ -19,6 +19,7 @@ var ViewModel = {
   },
 //------------------------------------------------------------------------------
   titleArray : ko.observableArray(),
+  headerTitleArray : ko.observableArray(),
 
   titleElements : function() {
     for (x = 0; x < data.length; x++) {
@@ -26,10 +27,19 @@ var ViewModel = {
     }
   },
 
+  headerTitleElements : function() {
+    for (x = 0; x < headerData.length; x++) {
+      ViewModel.headerTitleArray.push(headerData[x]);
+    }
+  },
+
   init : function() {
     ViewModel.titleElements();
+    ViewModel.headerTitleElements();
   }
 
 };
+
+
 ko.applyBindings(ViewModel);
 ViewModel.init();
