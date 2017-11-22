@@ -38,8 +38,9 @@ function appendElements(element) {
   function projects (element) {
     var projects = $('.projects');
     for (var i = 0; i < info.length; i++) {
-      projects.append('<h3 class="subHeader">'+info[i].title+'</h3>');
-      projects.append()
+      projects.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+info[i].dates+'</span></h3>');
+      projects.append('<p class="description">' + info[i].description + '</p>');
+      arrow(projects,i);
     }
   }
 

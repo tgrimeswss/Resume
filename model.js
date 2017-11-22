@@ -1,5 +1,10 @@
 var data = [
   {
+    title : 'Developer Philosophy',
+    id : 'philosopy',
+    description : ''
+  },
+  {
     title : 'Language Skills',
     id : 'skills',
     info : [
@@ -28,6 +33,12 @@ var data = [
     id : 'experience',
     info : [
       {
+        title : 'Software developer (West Shore Solutions LLC.)',
+        employer : 'Self-employed',
+        dates : 'January 2015 - Present',
+        description : 'Delivered various web-based applications to professional ' +
+        'clients in New York City.'
+      },{
         title : 'Business & Computer Science Teacher',
         employer : 'Fort Hamilton High School',
         dates : 'September 2017 - Present',
@@ -40,12 +51,6 @@ var data = [
         dates : 'September 2017 - Present',
         description : 'Teacher, corporate trainer and curriculum developer of paid ' +
         'Python and Javascript courses.'
-      },{
-        title : 'Software developer (Private Contractor)',
-        employer : 'Self-employed',
-        dates : 'January 2015 - Present',
-        description : 'Delivered various web-based applications to professional ' +
-        'clients in New York City.'
       }
     ]
   },{
@@ -54,8 +59,26 @@ var data = [
     info : [
       {
         title : 'The Mechanism',
-        description : '',
-        dates : ''
+        dates : 'Completed Sept 2016',
+        description : 'Creator and developer of a virtual business plan constructor and business plan simulator. ' +
+        'The project was originally designed for students who were developing their own virtual business while enrolled ' +
+        'in a business class. Features of the application include a user interface  for users to incorporate data regarding the ' +
+        'marketing, financial and organizational planning of their business, a virtual bid/ask stock market ' +
+        'for users to trade equity with other users as well as a virtual banking system for users to request ' +
+        'funding. Virtual sales data was entered manually weekly to track business performance.'
+      }, {
+        title : 'Restaurant Locator',
+        dates : 'Completed October 2017',
+        description : 'Creator and developer of a user interface that allows users to search for ' +
+        'popular restaurants within the Bay Ridge, Brooklyn NY area. Knockout JS was implemented to ' +
+        'create an automatically updating DOM each time the user creates an input.'
+      }, {
+        title : 'Rent Roll System',
+        dates : 'Completed October 2017',
+        description : 'Creator of a python/javascript based spreadsheet application for ' +
+        '544 West 157th Street Housing Development Fund Corporation. The application ' +
+        'allowed users to create reports for rents due, late fees, SCRIE deductions, ' +
+        'Section 8 deductions as well as an Invoice producer.'
       }
     ]
   },
