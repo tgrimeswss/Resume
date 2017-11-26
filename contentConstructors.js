@@ -37,7 +37,7 @@ function appendElements(element) {
     for (var i = 0; i < info.length; i++) {
       thisElement.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+ info[i].dates +'</span></h3>');
       thisElement.append('<p class="sub2Header">' + info[i].school +' - ' + info[i].cert + '</p>');
-      if(i === 0) {
+      if(i === 0 || i === 1) {
         thisElement.append('<h3 style="text-align:center;">' + info[i].description + '</h3>');
       }
       else {
