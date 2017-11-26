@@ -12,7 +12,7 @@ function appendElements(element) {
       arrow(thisElement,i);
     }
     for (var x = 0; x < info[0].bio.length;x++) {
-      $('.bioInfo').append('<span style="margin-left: 30px;"><span>'+info[0].bio[x].name+'</span><span>'+info[0].bio[x].content+'</span></span><br>');
+      $('.bioInfo').append('<p style="margin-left: 30px;"><span>'+info[0].bio[x].name+'</span><span>'+info[0].bio[x].content+'</span></p>');
     }
   }
 
@@ -44,7 +44,7 @@ function appendElements(element) {
         thisElement.append('<p class="description">' + info[i].description + '</p>');
       }
       for (var x = 0; x < info[i].skillsLearned.length; x++) {
-        thisElement.append('<li class="listElements">' + info[i].skillsLearned[x] + '</li>')
+        thisElement.append('<li style="margin-left: 50px;">' + info[i].skillsLearned[x] + '</li>')
       }
       arrow(thisElement,i);
     }
