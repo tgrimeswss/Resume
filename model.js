@@ -145,7 +145,7 @@ var data = [
         cert : 'Certificate received May 22nd, 2017',
         dates : 'March 2017 - May 2017',
         description : 'Demonstrated mastery in the Python language. Skills developed include:',
-        skillsLearned : ['Webscraping', 'Python OS', 'Test skill 3']
+        skillsLearned : ['Webscraping', 'Python OS', 'Pandas','NumPy']
       },{
         title : 'Masters in Business Education',
         school : 'Hofstra University',

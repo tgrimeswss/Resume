@@ -37,7 +37,12 @@ function appendElements(element) {
     for (var i = 0; i < info.length; i++) {
       thisElement.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+ info[i].dates +'</span></h3>');
       thisElement.append('<p class="sub2Header">' + info[i].school +' - ' + info[i].cert + '</p>');
-      thisElement.append('<p class="description">' + info[i].description + '</p>')
+      if(i === 0) {
+        thisElement.append('<h3 style="text-align:center;">' + info[i].description + '</h3>');
+      }
+      else {
+        thisElement.append('<p class="description">' + info[i].description + '</p>');
+      }
       for (var x = 0; x < info[i].skillsLearned.length; x++) {
         thisElement.append('<li class="listElements">' + info[i].skillsLearned[x] + '</li>')
       }
