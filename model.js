@@ -1,8 +1,30 @@
 var data = [
   {
-    title : 'Developer Philosophy',
-    id : 'philosopy',
-    description : ''
+    title : 'Bio & Philosophy',
+    id : 'bio',
+    info : [
+      {
+        picture : 'img/me.jpg',
+        header : 'Philosophy',
+        description : '"Develop user-friendly, optimized and efficient applications ' +
+        'acheiving user satisfaction."',
+        ridiculous : [
+          {
+            name : 'Stamina',
+            level : ''
+          },{
+            name : 'Creativity',
+            level : ''
+          },{
+            name : 'Integrity',
+            level : ''
+          },{
+            name : 'Overall skill',
+            level : ''
+          }
+        ]
+      }
+    ]
   },
   {
     title : 'Language Skills',
@@ -73,7 +95,7 @@ var data = [
         'popular restaurants within the Bay Ridge, Brooklyn NY area. Knockout JS was implemented to ' +
         'create an automatically updating DOM each time the user creates an input.'
       }, {
-        title : 'Rent Roll System',
+        title : 'Rent roll program and user interface',
         dates : 'Completed October 2017',
         description : 'Creator of a python/javascript based spreadsheet application for ' +
         '544 West 157th Street Housing Development Fund Corporation. The application ' +
@@ -135,7 +157,7 @@ var headerData = [
   {
     title : 'https://github.com/tgrimeswss',
     id : 'gitHub',
-    img : 'img/github.png'
+    img : 'img/gitHub.png'
   },
   {
     title : '516-978-9413',

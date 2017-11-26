@@ -2,15 +2,116 @@
   font-family: 'Cairo', sans-serif;
 }
 
-.topHeader {
-  font-size: 100px;
+@media screen and (max-width:550px) {
+
+  .topHeader {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .subHeader {
+    margin-left: 15px;
+  }
+
+  .sub2Header {
+    margin-left: 80px;
+    transition: font-size 1s;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .additional {
+    margin-left: 120px;
+    font-style: italic;
+  }
+
+  #theMenuList {
+    font-size: 25px;
+  }
+
+  #theMenuList:click {
+    background-color: black;
+  }
+
+}
+
+@media screen and (min-width:550px) {
+
+  .topHeader {
+    font-size: 100px;
+  }
+
+  .subHeader {
+    margin-left: 65px;
+  }
+
+  .sub2Header {
+    margin-left: 40px;
+    transition: font-size 1s;
+  }
+
+  .description {
+    margin-left: 100px;
+    font-size: 14px;
+  }
+
+  .additional {
+    margin-left: 120px;
+    font-style: italic;
+  }
+
+  .topHeaderImg {
+    transition: width .5s;
+  }
+
+  .formatHeader:hover {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .bioPic:hover {
+    opacity: 1.0;
+  }
+
+  .largerFont:hover {
+    font-size: 175%;
+  }
+
+  .upArrow:hover {
+    font-size: 35px;
+  }
+
+  .largerHeaderImg:hover {
+    width: 80px;
+    cursor: pointer;
+  }
+
+}
+
+@media screen and (max-width:700px) and (min-width: 551px) {
+  .topHeader {
+    font-size: 70px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .topHeader {
+    margin-left: 50px;
+  }
+}
+
+.largerFont:hover, .largerHeaderImg:hover {
+  cursor: pointer;
 }
 
 .topHeaderImg {
   width: 50px;
   text-align: center;
   margin: 0 auto;
-  transition: width .5s;
 }
 
 .blockDisplay {
@@ -31,11 +132,6 @@
   transition: font-size .5s;
 }
 
-.formatHeader:hover {
-  font-size: 30px;
-  cursor: pointer;
-}
-
 .showInfo {
   background-color: #F8F8F8;
 }
@@ -44,35 +140,7 @@
   text-align: center;
   font-size: 20px;
   cursor: pointer;
-}
-
-.subHeader {
-  margin-left: 65px;
-}
-
-.sub2Header {
-  margin-left: 80px;
-  transition: font-size 1s;
-}
-
-.largerFont:hover {
-  font-size: 175%;
-  cursor: pointer;
-}
-
-.largerHeaderImg:hover {
-  width: 80px;
-  cursor: pointer;
-}
-
-.description {
-  margin-left: 100px;
-  font-size: 14px;
-}
-
-.additional {
-  margin-left: 120px;
-  font-style: italic;
+  transition: font-size .5s;
 }
 
 .dates {
@@ -84,5 +152,13 @@
 }
 
 .headerWidth {
-  width: 33%;
+  width: 32%;
+}
+
+.bioPic {
+  width: 100%;
+}
+
+.centerText {
+  text-align: center;
 }

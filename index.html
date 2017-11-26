@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Thomas Grimes</title>
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
@@ -13,7 +14,7 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <div class="topHeader" style="margin-left:50px;">Thomas Grimes</div>
+          <div class="topHeader">Thomas Grimes</div>
         </div>
       </div>
       <div class="row">
@@ -28,7 +29,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="menuElements" style="margin-top:35px;" data-bind="foreach:titleArray">
-            <li class="listElements changeFontSize largerFont" data-bind="text:title,click:$parent.displayInfo"></li>
+            <li id="theMenuList" class="listElements changeFontSize largerFont" data-bind="text:title,click:$parent.displayInfo"></li>
             <div class="showInfo" style="display:none;" data-bind="css: id"></div>
           </div>
         </div>

@@ -2,54 +2,58 @@ function appendElements(element) {
   showInfo = $('.showInfo');
   id = element.id;
   info = element.info;
+  thisElement = $('.'+id);
+
+  function bio() {
+    for (var i = 0; i < info.length; i++) {
+      thisElement.append('<div class="row"><div class="col-md-6"><img class="bioPic" src="'+info[i].picture+'"></div>'+
+      '<div class="col-md-6"><h3 class="centerText">'+info[i].header+'</h3><p class="centerText"><em>'+info[i].description+'</em></p></div></div>');
+      arrow(thisElement,i);
+    }
+  }
 
   function skills () {
-    var skills = $('.skills');
     for (var i = 0; i < info.length; i++) {//This loop will construct each skill content
-      skills.append('<h3 class="subHeader">'+info[i].skillName+'</h3>');//Append the header
-      skills.append('<p class="description">'+info[i].experience+'</p>');//Append the description
-      skills.append('<p class="additional">'+info[i].additional+'</p>');//Append the description
-      arrow(skills,i);
+      thisElement.append('<h3 class="subHeader">'+info[i].skillName+'</h3>');//Append the header
+      thisElement.append('<p class="description">'+info[i].experience+'</p>');//Append the description
+      thisElement.append('<p class="additional">'+info[i].additional+'</p>');//Append the description
+      arrow(thisElement,i);
     }
   }
 
   function experience () {
-    var experience = $('.experience');
     for (var i = 0; i < info.length; i++) {
-      experience.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+ info[i].dates +'</span></h3>');
-      experience.append('<span><p class="description">'+info[i].description+'</p></span>');
-      arrow(experience,i);
+      thisElement.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+ info[i].dates +'</span></h3>');
+      thisElement.append('<span><p class="description">'+info[i].description+'</p></span>');
+      arrow(thisElement,i);
     }
   }
 
   function education () {
-    var education = $('.education');
     for (var i = 0; i < info.length; i++) {
-      education.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+ info[i].dates +'</span></h3>');
-      education.append('<p class="sub2Header">' + info[i].school +' - ' + info[i].cert + '</p>');
-      education.append('<p class="description">' + info[i].description + '</p>')
+      thisElement.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+ info[i].dates +'</span></h3>');
+      thisElement.append('<p class="sub2Header">' + info[i].school +' - ' + info[i].cert + '</p>');
+      thisElement.append('<p class="description">' + info[i].description + '</p>')
       for (var x = 0; x < info[i].skillsLearned.length; x++) {
-        education.append('<li class="listElements">' + info[i].skillsLearned[x] + '</li>')
+        thisElement.append('<li class="listElements">' + info[i].skillsLearned[x] + '</li>')
       }
-      arrow(education,i);
+      arrow(thisElement,i);
     }
   }
 
   function projects (element) {
-    var projects = $('.projects');
     for (var i = 0; i < info.length; i++) {
-      projects.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+info[i].dates+'</span></h3>');
-      projects.append('<p class="description">' + info[i].description + '</p>');
-      arrow(projects,i);
+      thisElement.append('<h3 class="subHeader">'+info[i].title+'<span class="dates">'+info[i].dates+'</span></h3>');
+      thisElement.append('<p class="description">' + info[i].description + '</p>');
+      arrow(thisElement,i);
     }
   }
 
   function clientReviews (element) {
-    var clientReviews = $('.clientReviews');
     for (var i = 0; i < info.length; i++) {
-      clientReviews.append('<h3 class="subHeader">'+info[i].name+'</h3>');
-      clientReviews.append('<span class="sub2Header">' +rating(i) + ' - ' + '<span><em>'+info[i].testimonial+ '</em></span></span>');
-      arrow(clientReviews,i);
+      thisElement.append('<h3 class="subHeader">'+info[i].name+'</h3>');
+      thisElement.append('<span class="sub2Header">' +rating(i) + ' - ' + '<span><em>'+info[i].testimonial+ '</em></span></span>');
+      arrow(thisElement,i);
     }
   }
 
@@ -57,7 +61,7 @@ function appendElements(element) {
     if (iterator+1 != info.length) {
       element.append('<hr>');
     } else if (iterator+1 === info.length) {
-        arrow = element.append('<h2 class="upArrow">^</h2>');
+        arrow = element.append('<h2 class="upArrow" style="margin:0;">^</h2>');
         $('.upArrow').click(function() {
           ViewModel.toggleVisibility(element);
         })
@@ -96,5 +100,7 @@ function appendElements(element) {
     clientReviews (element);
   } else if (id === 'gitHub' || id === 'phone' || id === 'email') {
     headerData (element);
+  } else if (id === 'bio') {
+    bio (element);
   }
 }
