@@ -1,26 +1,32 @@
 var data = [
   {
-    title : 'Bio & Philosophy',
+    title : 'Bio & Mission',
     id : 'bio',
     info : [
       {
         picture : 'img/me.jpg',
-        header : 'Philosophy',
-        description : '"Develop user-friendly, optimized and efficient applications ' +
-        'acheiving user satisfaction."',
-        ridiculous : [
+        header : 'Mission',
+        description : '"To analyze, construct and interpret data for user ease. '+
+        'My skill in Python and Javascript development as well as my background '+
+        'as a high school business/computer science teacher make me a useful '+
+        'candidate to work both in specific contexts of a front-end and back-end '+
+        'development environment."',
+        bio : [
           {
-            name : 'Stamina',
-            level : ''
+            name : 'Name: ',
+            content : 'Thomas Grimes'
           },{
-            name : 'Creativity',
-            level : ''
+            name : 'Age: ',
+            content : 27
           },{
-            name : 'Integrity',
-            level : ''
+            name : 'Current location: ',
+            content : 'New York, New York'
           },{
-            name : 'Overall skill',
-            level : ''
+            name : 'Likes: ',
+            content : 'Pizza, Surfing, Snowboarding, Productivity'
+          }, {
+            name : 'Dislikes: ',
+            content : 'Brocolli, Brussel sprouts, Stuffed peppers'
           }
         ]
       }
@@ -73,6 +79,16 @@ var data = [
         dates : 'September 2017 - Present',
         description : 'Teacher, corporate trainer and curriculum developer of paid ' +
         'Python and Javascript courses.'
+      },{
+        title : 'Business Owner / Professional Watercraft Manufacturer',
+        employer : 'Self Employed - Island Industries',
+        dates : 'March 2008 - March 2016',
+        description : 'Owner and manufacturer of custom made surfboards and paddleboards.'
+      },{
+        title : 'Equity Salesman & Trader',
+        employer : 'J.D. Nicholas and Associates',
+        dates : 'January 2013 - September 2013',
+        description : 'Licensed stock broker and equity trader.'
       }
     ]
   },{
@@ -148,6 +164,10 @@ var data = [
         name : '544 West 157th Street Housing Development Fund Corporation',
         rating : 5,
         testimonial : '"We would recommend Thomas Grimes highly!"'
+      },{
+        name : '',
+        rating : null,
+        testimonial : 'Additional references can be provided upon request'
       }
     ]
   }

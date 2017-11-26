@@ -7,8 +7,12 @@ function appendElements(element) {
   function bio() {
     for (var i = 0; i < info.length; i++) {
       thisElement.append('<div class="row"><div class="col-md-6"><img class="bioPic" src="'+info[i].picture+'"></div>'+
-      '<div class="col-md-6"><h3 class="centerText">'+info[i].header+'</h3><p class="centerText"><em>'+info[i].description+'</em></p></div></div>');
+      '<div class="col-md-6 bioInfo"><h3 class="centerText">'+info[i].header+'</h3><p style="padding:10px;" class="centerText"><em>'+
+      info[i].description+'</em></p></div></div>');
       arrow(thisElement,i);
+    }
+    for (var x = 0; x < info[0].bio.length;x++) {
+      $('.bioInfo').append('<span style="margin-left: 30px;"><span>'+info[0].bio[x].name+'</span><span>'+info[0].bio[x].content+'</span></span><br>');
     }
   }
 
